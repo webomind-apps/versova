@@ -12,7 +12,7 @@
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="name">Company Name</label>
+                            <label for="Company Name">Company Name</label>
                             <input type="text" class="form-control" id="company_name" name="company_name"
                                 placeholder="Company Name">
                             @error('company_name')
@@ -20,7 +20,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="name">Contact Person Name</label>
+                            <label for="COntact Person Name">Contact Person Name</label>
                             <input type="text" class="form-control" id="contact_person" name="contact_person"
                                 placeholder="Contact Person Name">
                             @error('contact_person')
@@ -28,7 +28,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="number">Phone Number</label>
+                            <label for="Phone Number">Phone Number</label>
                             <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
                             @error('phone')
                                 <span class="error">{{ $message }}</span>
@@ -47,7 +47,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="email">Email</label>
+                            <label for="Email">Email</label>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             @error('email')
                                 <span class="error">{{ $message }}</span>
@@ -73,7 +73,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="to date">Status</label>
+                            <label for="Status">Status</label>
                             <select name="status" id="status" class="form-control" required>
                                 <option>--Select--</option>
                                 <option value="1" name="status">Active</option>

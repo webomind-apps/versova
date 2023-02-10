@@ -14,17 +14,17 @@
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="name">Name</label>
+                            <label for="Name">Name</label>
                             <input type="text" class="form-control" id="name" name="name"
                                 value="{{ $superadmin->name }}">
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="email">Emails</label>
+                            <label for="Email">Emails</label>
                             <input type="text" class="form-control" id="email" name="email"
                                 value="{{ $superadmin->email }}">
                         </div>
                         <div class="form-group col-md-12" id="password1">
-                            <label for="email">Password</label>
+                            <label for="Password">Password</label> 
                             <input type="password" class="form-control" id="password_1" name="password"
                                 placeholder="Password" required>
                             <i class="far fa-eye" id="togglePassword"
@@ -32,7 +32,7 @@
                             cursor: pointer"></i>
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="email">Retype Password</label>
+                            <label for="Retype Password">Retype Password</label>
                             <input type="password" class="form-control" id="password_2" name="password"
                                 placeholder="Password" required>
                         </div>

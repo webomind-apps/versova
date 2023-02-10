@@ -13,21 +13,21 @@
                     @csrf
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="name">Name</label>
+                            <label for="Name">Name</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                             @error('name')
                                 <span class="error">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="email">Emails</label>
+                            <label for="Email">Email</label>
                             <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             @error('email')
                                 <span class="error">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="form-group col-md-12" id="password1">
-                            <label for="email">Password</label>
+                            <label for="Password">Password</label>
                             <input type="password" class="form-control" id="password_1" name="password"
                                 placeholder="Password">
                             <i class="far fa-eye" id="togglePassword"
@@ -38,7 +38,7 @@
                             @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="email">Retype Password</label>
+                            <label for="Retype Password">Retype Password</label>
                             <input type="password" class="form-control" id="password_2" name="password"
                                 placeholder="Password">
                             @error('password')

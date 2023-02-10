@@ -87,6 +87,7 @@
                                     value="{{ $customercompany->id }}" @if (in_array($customercompany->id, $existing_customers)) checked @endif>
                                 <label
                                     for="{{ $customercompany->company_name }}">{{ $customercompany->company_name }}</label><br>
+
                             @endforeach
                         </div>
                         @error('customers')
