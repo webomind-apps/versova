@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SalesPersonRequest;
-use App\Models\CustomerCompany;
+use App\Models\Customer;
 use App\Models\SalesPerson;
 use App\Models\SalesPersonCustomer;
 use Illuminate\Http\Request;
@@ -31,7 +31,7 @@ class SalesPersonController extends Controller
      */
     public function create()
     {
-        $customercompanies = CustomerCompany::all();
+        $customercompanies = Customer::all();
         return view('admin.salesperson.create', compact('customercompanies'));
     }
 
@@ -84,7 +84,7 @@ class SalesPersonController extends Controller
     public function edit($id)
     {
         $salesperson = SalesPerson::find($id);
-        $customercompanies = CustomerCompany::all();
+        $customercompanies = Customer::all();
         return view('admin.salesperson.edit', compact('salesperson', 'customercompanies'));
     }
 

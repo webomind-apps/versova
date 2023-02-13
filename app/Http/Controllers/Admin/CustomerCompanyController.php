@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CustomerCompanyRequest;
-use App\Models\CustomerCompany;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -17,7 +17,7 @@ class CustomerCompanyController extends Controller
      */
     public function index()
     {
-        $customercompanies = CustomerCompany::paginate(10);
+        $customercompanies = Customer::paginate(10);
         return view('admin.customercompany.index', compact('customercompanies'));
     }
 
@@ -39,7 +39,7 @@ class CustomerCompanyController extends Controller
      */
     public function store(CustomerCompanyRequest $request)
     {
-        $customercompany = new CustomerCompany();
+        $customercompany = new Customer();
         $customercompany->company_name = $request->company_name;
         $customercompany->contact_person  = $request->contact_person;
         $customercompany->phone = $request->phone;
@@ -72,7 +72,7 @@ class CustomerCompanyController extends Controller
      */
     public function edit($id)
     {
-        $customercompany = CustomerCompany::find($id);
+        $customercompany = Customer::find($id);
         return view('admin.customercompany.edit', compact('customercompany'));
     }
 
@@ -85,7 +85,7 @@ class CustomerCompanyController extends Controller
      */
     public function update(CustomerCompanyRequest $request, $id)
     {
-        $customercompany = CustomerCompany::find($id);
+        $customercompany = Customer::find($id);
         $customercompany->company_name = $request->company_name;
         $customercompany->contact_person  = $request->contact_person;
         $customercompany->phone = $request->phone;
@@ -108,7 +108,7 @@ class CustomerCompanyController extends Controller
      */
     public function destroy($id)
     {
-        $customercompany = CustomerCompany::find($id);
+        $customercompany = Customer::find($id);
         $customercompany->delete();
 
         return redirect()->route('admin.customer-company.index')->with('success', 'Customer Company deleted successfully');

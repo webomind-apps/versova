@@ -82,11 +82,21 @@
         </div>
     </li>
 
-    <li class="nav-item {{ request()->segment(2) == 'products' ? 'active' : '' }}">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{ request()->segment(2) == 'category' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.category.index')}}">
+            <i class="fas fa-usd-circle"></i>
+            <span> Category </span></a>
+    </li>
+    <li class="nav-item {{ request()->segment(2) == 'sub-category' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.sub-category.index')}}">
+            <i class="fas fa-usd-circle"></i>
+            <span>Sub Category </span></a>
+    </li>
+    {{-- <li class="nav-item {{ request()->segment(2) == 'products' ? 'active' : '' }}">
+        <a class="nav-link" href="{{ route('admin.product.index')}}">
             <i class="fas fa-usd-circle"></i>
             <span> Products </span></a>
-    </li>
+    </li> --}}
 
 
     <!-- Divider -->

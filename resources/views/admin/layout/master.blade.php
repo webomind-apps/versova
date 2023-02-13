@@ -87,7 +87,7 @@
 
     <script>
         tinymce.init({
-            selector: '',
+            selector: '#description',
             plugins: 'code',
             valid_elements: '*[*]',
         });

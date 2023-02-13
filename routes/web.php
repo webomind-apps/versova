@@ -1,9 +1,11 @@
 <?php
 
-
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CustomerCompanyController;
 use App\Http\Controllers\Admin\SalesPersonController;
+use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\SuperAdminController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +35,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
             Route::resource('super-admin', SuperAdminController::class);
             Route::resource('sales-person', SalesPersonController::class);
             Route::resource('customer-company', CustomerCompanyController::class);
+            Route::resource('category', CategoryController::class);
+            Route::resource('sub-category', SubcategoryController::class);
         });
     });
 });

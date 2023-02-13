@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sales_person_customers', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('sales_person_id')->nullabel()->constrained('sales_person')->onDelete('cascade');
-            $table->foreignId('customer_id')->constrained('customer')->onDelete('cascade');
+            $table->string('name');
+            $table->string('slug');
+            $table->bigInteger('position')->nullable();
+            $table->text('description')->nullable();
+            $table->boolean('status')->default(true);
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sales_person_customers');
+        Schema::dropIfExists('categories');
     }
 };

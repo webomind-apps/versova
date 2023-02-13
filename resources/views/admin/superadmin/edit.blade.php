@@ -47,20 +47,3 @@
     </div>
 @endsection
 
-@push('scripts')
-    <script>
-        $(document).on('change', '#password_2', function() {
-            checkPassword()
-        });
-
-        function checkPassword() {
-            var password_1 = $('#password_1').val();
-            var password_2 = $('#password_2').val();
-            if (password_1 !== password_2) {
-                swal("Password miss match!");
-                $('#password_1').val('');
-                $('#password_2').val('');
-            }
-        }
-    </script>
-@endpush

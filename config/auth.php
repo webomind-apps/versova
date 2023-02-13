@@ -40,7 +40,18 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'sales' => [
+            'driver' => 'session',
+            'provider' => 'sales_people',
+        ],
+        'customer' => [
+            'driver' => 'session',
+            'provider' => 'customers',
+        ],
     ],
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +74,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'sales' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\SalesPerson::class,
+        ],
+        'customers' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Customer::class,
         ],
 
         // 'users' => [
@@ -93,6 +112,13 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'sales' => [
+            'provider' => 'sales_person',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+
     ],
 
     /*
